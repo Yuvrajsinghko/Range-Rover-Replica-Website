@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 30px 40px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-center img {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.intro-vid{
+  height: 790px;
+  width: 100%;
+  background-color: cadetblue;
+}
+
+.intro-vid {
+  position: relative;
+  height: 790px;
+  width: 100%;
+  overflow: hidden;
+}
+
+#iframe-holder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#iframe-holder iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.video-overlay {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+  color: white;
+}
+
+.video-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.video-overlay button {
+  padding: 15px 45px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.video-overlay button:hover {
+  background: white;
+  color: black;
+}
