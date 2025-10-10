@@ -41,7 +41,40 @@ body {
 .intro-vid{
   height: 790px;
   width: 100%;
-  background-color: cadetblue;
+  
 }
+.showcase{
+  margin-top:350px ;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+.first,.second,.third,.fourth{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 450px;
+  
+  background-color: #8f282180;
+}
+
+.showcase .quote{
+  margin-top: 0px;
+}
+.showcase button{
+  height: 50px;
+  width: 150px;
+  color: #ddd;
+  background-color: black;
+  font-size: 19px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.first svg{
+  margin-left: 20px;
+
+}
+
 
 
