@@ -41,6 +41,56 @@ body {
 .intro-vid {
   height: 790px;
   width: 100%;
+  position: relative;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 30%;
+  left: 70px;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 10;
+  max-width: 500px;
+}
+
+.video-overlay h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.video-overlay p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.video-overlay .explore-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 14px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.video-overlay .explore-btn:hover {
+  background-color: #f0f0f0;
+  transform: translateX(5px);
+}
+
+.video-overlay .explore-btn svg {
+  width: 18px;
+  height: 18px;
 }
 .showcase {
   margin-top: 350px;
@@ -133,11 +183,10 @@ body {
   font-size: 13px;
 }
 
-
 .feature-grid {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;   
-  grid-template-rows: 240px 240px;    
+  grid-template-columns: 1fr 1.4fr;
+  grid-template-rows: 240px 240px;
   gap: 24px;
   align-items: stretch;
 }
