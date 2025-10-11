@@ -38,30 +38,29 @@ body {
   margin: 0 20px;
 }
 
-.intro-vid{
+.intro-vid {
   height: 790px;
   width: 100%;
-  
 }
-.showcase{
-  margin-top:350px ;
+.showcase {
+  margin-top: 350px;
   display: flex;
   justify-content: space-evenly;
-
 }
-.first,.second,.third,.fourth{
+.first,
+.second,
+.third,
+.fourth {
   display: flex;
   flex-direction: column;
   height: auto;
   width: 450px;
-  
-  background-color: #8f282180;
 }
 
-.showcase .quote{
+.showcase .quote {
   margin-top: 0px;
 }
-.showcase button{
+.showcase button {
   height: 50px;
   width: 150px;
   color: #ddd;
@@ -71,10 +70,15 @@ body {
   margin-bottom: 30px;
 }
 
-.first svg{
-  margin-left: 20px;
-
+.variety {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 40px;
 }
 
-
-
+.crousel {
+  flex: 1;
+  width: 800px !important;
+  height: 400px !important;
+}
