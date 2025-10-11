@@ -77,11 +77,24 @@ body {
   flex: 1;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 40px;
+  padding: 100px 80px;
+  height: 900px;
+  width: 100%;
+  background-color:burlywood;
 }
 
 .crousel {
   flex: 1;
-  width: 800px !important;
+  width: 900px !important;
   height: 400px !important;
+}
+
+.fifth-sec{
+  height: 900px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 100px;
+  background-color: chocolate;
 }
