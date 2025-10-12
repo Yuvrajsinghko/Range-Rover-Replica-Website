@@ -149,14 +149,14 @@ body {
   display: block;
 }
 
-/* ---------- FIFTH SEC (NEW) ---------- */
+
 .fifth-sec {
   width: 100%;
   padding: 60px 0;
-  background: #fafbfb; /* change / remove as desired */
+  background: #fafbfb; 
 }
 
-/* Left info */
+
 .fifth-sec .info {
   padding-right: 40px;
 }
@@ -191,7 +191,7 @@ body {
   align-items: stretch;
 }
 
-/* Place the 4 items exactly */
+
 .feature-grid .item1 {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -209,17 +209,17 @@ body {
   grid-row: 2 / 3;
 }
 
-/* Make images and video fill each cell */
+
 .feature-grid .grid-item,
 .feature-grid .grid-item img,
 .feature-grid .grid-item video {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover; /* fill & crop like a hero image */
+  object-fit: cover; 
 }
 
-/* Ensure the grid items are overflow-hidden so object-fit cropping works cleanly */
+
 .feature-grid .grid-item {
   overflow: hidden;
   position: relative;
@@ -244,7 +244,7 @@ body {
   width: auto;
   height: auto;
 }
-/* Responsive tweaks */
+
 @media (max-width: 992px) {
   .fifth-sec .info {
     padding-right: 0;
