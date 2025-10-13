@@ -251,6 +251,18 @@ p {
   font-weight: 300;
 }
 
+
+
+
+
+.eighth-sec{
+  margin-bottom: 60px;
+}
+
+
+.tenth-sec{
+  margin-top: 90px;
+}
 @media (max-width: 992px) {
   .fifth-sec .info {
     padding-right: 0;
