@@ -1,3 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+img,
+iframe {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
 body {
   margin: 0;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -16,8 +25,6 @@ body {
   color: black;
 }
 
-
-
 .nav-left,
 .nav-right {
   display: flex;
@@ -26,7 +33,7 @@ body {
   font-weight: 800;
   letter-spacing: 2px;
 }
-.nav-right svg{
+.nav-right svg {
   margin-left: 10px;
 }
 
@@ -252,25 +259,25 @@ body {
 }
 .seventh-sec h5,
 p {
-  color:white;
+  color: white;
   font-weight: 300;
 }
 
-.showcase a{
+.showcase a {
   text-decoration: none;
   color: black;
 }
 
-
-
-.eighth-sec{
+.eighth-sec {
   margin-bottom: 60px;
 }
 
+.nineth-sec {
+  padding: 100px 100px;
+}
 
-.tenth-sec{
+.tenth-sec {
   margin-top: 90px;
-  
 }
 @media (max-width: 992px) {
   .fifth-sec .info {
