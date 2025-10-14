@@ -16,6 +16,8 @@ body {
   color: black;
 }
 
+
+
 .nav-left,
 .nav-right {
   display: flex;
@@ -23,6 +25,9 @@ body {
   font-size: 14px;
   font-weight: 800;
   letter-spacing: 2px;
+}
+.nav-right svg{
+  margin-left: 10px;
 }
 
 .nav-center {
@@ -129,7 +134,7 @@ body {
   padding: 100px 80px;
   height: 900px;
   width: 100%;
-  background-color: burlywood;
+  background-color: #fafbfb;
 }
 
 .carousel-container {
@@ -251,7 +256,10 @@ p {
   font-weight: 300;
 }
 
-
+.showcase a{
+  text-decoration: none;
+  color: black;
+}
 
 
 
@@ -262,6 +270,7 @@ p {
 
 .tenth-sec{
   margin-top: 90px;
+  
 }
 @media (max-width: 992px) {
   .fifth-sec .info {
