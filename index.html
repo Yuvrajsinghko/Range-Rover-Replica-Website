@@ -354,10 +354,10 @@
                     bis_skin_checked="1"
                   >
                     <iframe
-                      src="https://player.vimeo.com/video/995416970?autoplay=1&amp;loop=1&amp;muted=1&amp;background=1"
+                      data-src="https://player.vimeo.com/video/995416970?autoplay=1&amp;loop=1&amp;muted=1&amp;background=1"
                       width="3840"
                       height="2160"
-                      loading="lazy"
+                      class="lazy-iframe"
                       frameborder="0"
                       allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
                       title="RANGE ROVER SPORT SV EDITION TWO HERO FILM"
@@ -403,8 +403,9 @@
                   bis_skin_checked="1"
                 >
                   <iframe
-                    src="https://player.vimeo.com/video/995416970?autoplay=1&amp;loop=1&amp;muted=1&amp;background=1"
+                    data-src="https://player.vimeo.com/video/995416970?autoplay=1&amp;loop=1&amp;muted=1&amp;background=1"
                     width="3840"
+                    class="lazy-iframe"
                     height="2160"
                     loading="lazy"
                     frameborder="0"
@@ -470,8 +471,9 @@
                   bis_skin_checked="1"
                 >
                   <iframe
-                    src="https://player.vimeo.com/video/995416970?autoplay=1&amp;loop=1&amp;muted=1&amp;background=1"
+                    data-src="https://player.vimeo.com/video/995416970?autoplay=1&amp;loop=1&amp;muted=1&amp;background=1"
                     width="3840"
+                    class="lazy-iframe"
                     height="2160"
                     loading="lazy"
                     frameborder="0"
@@ -518,8 +520,9 @@
                   bis_skin_checked="1"
                 >
                   <iframe
-                    src="https://player.vimeo.com/video/995416970?autoplay=1&amp;loop=1&amp;muted=1&amp;background=1"
+                    data-src="https://player.vimeo.com/video/995416970?autoplay=1&amp;loop=1&amp;muted=1&amp;background=1"
                     width="3840"
+                    class="lazy-iframe"
                     height="2160"
                     loading="lazy"
                     frameborder="0"
@@ -760,14 +763,19 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const lazyIframes = document.querySelectorAll(".lazy-iframe");
+
+        // Create an observer that watches for iframe visibility
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
+              // Replace data-src with src (load the real video)
               entry.target.src = entry.target.dataset.src;
-              observer.unobserve(entry.target);
+              observer.unobserve(entry.target); // Stop observing once loaded
             }
           });
         });
+
+        // Start observing all lazy iframes
         lazyIframes.forEach((iframe) => observer.observe(iframe));
       });
     </script>
