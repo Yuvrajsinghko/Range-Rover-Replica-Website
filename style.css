@@ -8,20 +8,29 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* GPU acceleration for animations */
 .carousel-item,
 .feature-grid .grid-item,
 .video-overlay,
 iframe,
 img {
-  will-change: transform;
+  will-change: auto;
   backface-visibility: hidden;
   transform: translateZ(0);
 }
 
-/* Smooth transitions */
+/* Remove animations during page load */
+.no-animations * {
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+/* Smooth transitions with reduced calculations */
 a,
 button {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease,
+              background-color 0.3s ease;
 }
 
 body {
@@ -41,7 +50,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: all 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .nav-center,
@@ -89,6 +98,15 @@ body {
   overflow: hidden;
 }
 
+.intro-vid .vimeo-iframe-holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .intro-vid iframe {
   position: absolute;
   top: 50%;
@@ -109,18 +127,6 @@ body {
   color: #fff;
   z-index: 10;
   max-width: 500px;
-  animation: fadeInUp 1s ease-out;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(-30%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
 }
 
 .video-overlay h1 {
@@ -178,35 +184,16 @@ body {
   flex-direction: column;
   height: auto;
   flex-basis: 300px;
-  opacity: 0;
-  animation: fadeIn 0.8s ease-out forwards;
-}
-
-.first {
-  animation-delay: 0.1s;
-}
-.second {
-  animation-delay: 0.2s;
-}
-.third {
-  animation-delay: 0.3s;
-}
-.fourth {
-  animation-delay: 0.4s;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
 }
 
 .showcase img {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: auto;
 }
 
 .showcase img:hover {
   transform: scale(1.05);
+  will-change: transform;
 }
 
 .showcase .quote {
@@ -257,7 +244,11 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s ease;
+}
+
+/* Optimize carousel transitions */
+.carousel-fade .carousel-item {
+  transition: opacity 0.6s ease-in-out;
 }
 
 .text-content button {
@@ -350,10 +341,12 @@ body {
 
 .feature-grid .grid-item img {
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: auto;
 }
 
 .feature-grid .grid-item:hover img {
   transform: scale(1.1);
+  will-change: transform;
 }
 
 .feature-grid .vimeo-iframe-holder {
@@ -400,34 +393,34 @@ body {
   padding: 100px;
 }
 
-.nineth-sec .carousel-item {
-  transition: opacity 0.6s ease-in-out;
-}
-
 .tenth-sec {
   margin-top: 90px;
 }
 
-/* Smooth scroll reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+/* Image loading optimization */
+img {
+  transition: opacity 0.3s ease;
 }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Loading optimization */
 img[loading="lazy"] {
   opacity: 0;
-  transition: opacity 0.3s;
 }
 
-img[loading="lazy"].loaded {
+img[loading="lazy"].loaded,
+img.loaded {
   opacity: 1;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @media (max-width: 992px) {
@@ -448,6 +441,15 @@ img[loading="lazy"].loaded {
   }
   .showcase {
     flex-wrap: wrap;
+  }
+  .variety {
+    padding: 50px 40px;
+    height: auto;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .carousel-container {
+    max-width: 100%;
   }
 }
 
@@ -471,5 +473,8 @@ img[loading="lazy"].loaded {
   }
   .video-overlay h1 {
     font-size: 32px;
+  }
+  .nineth-sec {
+    padding: 20px;
   }
 }

@@ -11,6 +11,9 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./style.css" />
+    <!-- Preload critical assets -->
+    <link rel="preconnect" href="https://player.vimeo.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   </head>
   <body>
     <section class="first-sec">
@@ -26,8 +29,9 @@
           <a href="#"
             ><img
               src="./assets/images/Range_Rover_Black.svg"
-              alt=""
+              alt="Range Rover Logo"
               height="12"
+              width="auto"
           /></a>
         </div>
         <div class="nav-right">
@@ -83,46 +87,41 @@
         </div>
       </nav>
     </section>
+
     <section class="second-sec">
-      <section class="second-sec">
-        <div class="intro-vid">
-          <div
-            id="iframe-holder"
-            class="vimeo-iframe-holder aspect-ratio-pls js-embed-target"
-            bis_skin_checked="1"
-          >
-            <iframe
-              src="https://player.vimeo.com/video/1098780539?autoplay=1&loop=1&muted=1&background=1"
-              width="1920"
-              height="1080"
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-              title="DEFENDER OCTS OASIS FILM"
-              bis_size='{"x":0,"y":1232,"w":0,"h":0,"abs_x":0,"abs_y":1232}'
-            ></iframe>
-          </div>
-          <div class="video-overlay">
-            <h1>LEAD BY EXAMPLE</h1>
-            <p>Designed in the UK and built in India.</p>
-            <button class="explore-btn">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
-                />
-              </svg>
-              EXPLORE
-            </button>
-          </div>
+      <div class="intro-vid">
+        <div class="vimeo-iframe-holder">
+          <iframe
+            src="https://player.vimeo.com/video/1098780539?autoplay=1&loop=1&muted=1&background=1&quality=540p"
+            width="1920"
+            height="1080"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            title="DEFENDER OCTS OASIS FILM"
+          ></iframe>
         </div>
-      </section>
+        <div class="video-overlay">
+          <h1>LEAD BY EXAMPLE</h1>
+          <p>Designed in the UK and built in India.</p>
+          <button class="explore-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+            EXPLORE
+          </button>
+        </div>
+      </div>
     </section>
+
     <section class="third-sec">
       <div class="showcase">
         <div class="first">
@@ -130,6 +129,8 @@
             src="./assets/images/range.webp"
             loading="lazy"
             alt="range-rover"
+            width="300"
+            height="200"
           />
           <p class="title">RANGE ROVER</p>
           <p class="quote">Go anywhere, composed everywhere.</p>
@@ -157,6 +158,8 @@
             src="./assets/images/sport.webp"
             loading="lazy"
             alt="range-rover"
+            width="300"
+            height="200"
           />
           <p class="title">RANGE ROVER SPORT</p>
           <p class="quote">Go anywhere, composed everywhere.</p>
@@ -184,6 +187,8 @@
             src="./assets/images/velar.webp"
             loading="lazy"
             alt="range-rover"
+            width="300"
+            height="200"
           />
           <p class="title">RANGE ROVER VELLAR</p>
           <p class="quote">Go anywhere, composed everywhere.</p>
@@ -211,6 +216,8 @@
             src="./assets/images/range-evoque.webp"
             loading="lazy"
             alt="range-rover"
+            width="300"
+            height="200"
           />
           <p class="title">RANGE ROVER EVOQUE</p>
           <p class="quote">Go anywhere, composed everywhere.</p>
@@ -235,6 +242,7 @@
         </div>
       </div>
     </section>
+
     <section class="fourth-sec">
       <div class="variety">
         <div class="carousel-container">
@@ -242,6 +250,7 @@
             id="carouselExampleFade"
             class="carousel slide carousel-fade"
             data-bs-ride="carousel"
+            data-bs-interval="5000"
           >
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -249,7 +258,9 @@
                   src="./assets/images/image1.webp"
                   class="d-block w-100"
                   loading="lazy"
-                  alt="..."
+                  alt="Range Rover Image 1"
+                  width="900"
+                  height="500"
                 />
               </div>
               <div class="carousel-item">
@@ -257,7 +268,9 @@
                   src="./assets/images/image2.webp"
                   class="d-block w-100"
                   loading="lazy"
-                  alt="..."
+                  alt="Range Rover Image 2"
+                  width="900"
+                  height="500"
                 />
               </div>
               <div class="carousel-item">
@@ -265,7 +278,9 @@
                   src="./assets/images/image3.webp"
                   class="d-block w-100"
                   loading="lazy"
-                  alt="..."
+                  alt="Range Rover Image 3"
+                  width="900"
+                  height="500"
                 />
               </div>
               <div class="carousel-item">
@@ -273,7 +288,9 @@
                   src="./assets/images/image4.webp"
                   class="d-block w-100"
                   loading="lazy"
-                  alt="..."
+                  alt="Range Rover Image 4"
+                  width="900"
+                  height="500"
                 />
               </div>
             </div>
@@ -310,66 +327,68 @@
         </div>
       </div>
     </section>
+
     <section class="fifth-sec">
-      <section class="fifth-sec">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-5 info">
-              <h2 class="title">RANGE ROVER</h2>
-              <p class="subtitle">Go anywhere, composed everywhere.</p>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 info">
+            <h2 class="title">RANGE ROVER</h2>
+            <p class="subtitle">Go anywhere, composed everywhere.</p>
 
-              <div class="actions">
-                <a class="btn btn-primary explore" href="#">Explore</a>
-                <a class="btn link-only" href="#">Build your own</a>
-              </div>
+            <div class="actions">
+              <a class="btn btn-primary explore" href="#">Explore</a>
+              <a class="btn link-only" href="#">Build your own</a>
             </div>
+          </div>
 
-            <div class="col-lg-7">
-              <div class="feature-grid">
-                <div class="grid-item item1">
-                  <img
-                    src="./assets/images/RRS1.webp"
-                    loading="lazy"
-                    alt="detail 1"
-                  />
-                </div>
-                <div class="grid-item item2">
-                  <img
-                    src="./assets/images/RRS2.webp"
-                    loading="lazy"
-                    alt="interior"
-                  />
-                </div>
-                <div class="grid-item item3">
-                  <img
-                    src="./assets/images/RRS3.webp"
-                    loading="lazy"
-                    alt="rear"
-                  />
-                </div>
-                <div class="grid-item item4">
-                  <div
-                    id="iframe-holder"
-                    class="vimeo-iframe-holder aspect-ratio-pls js-embed-target"
-                    bis_skin_checked="1"
-                  >
-                    <iframe
-                      data-src="https://player.vimeo.com/video/995416970?autoplay=1&amp;loop=1&amp;muted=1&amp;background=1"
-                      width="3840"
-                      height="2160"
-                      class="lazy-iframe"
-                      frameborder="0"
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                      title="RANGE ROVER SPORT SV EDITION TWO HERO FILM"
-                    ></iframe>
-                  </div>
+          <div class="col-lg-7">
+            <div class="feature-grid">
+              <div class="grid-item item1">
+                <img
+                  src="./assets/images/RRS1.webp"
+                  loading="lazy"
+                  alt="detail 1"
+                  width="400"
+                  height="240"
+                />
+              </div>
+              <div class="grid-item item2">
+                <img
+                  src="./assets/images/RRS2.webp"
+                  loading="lazy"
+                  alt="interior"
+                  width="560"
+                  height="240"
+                />
+              </div>
+              <div class="grid-item item3">
+                <img
+                  src="./assets/images/RRS3.webp"
+                  loading="lazy"
+                  alt="rear"
+                  width="400"
+                  height="240"
+                />
+              </div>
+              <div class="grid-item item4">
+                <div class="vimeo-iframe-holder">
+                  <iframe
+                    data-src="https://player.vimeo.com/video/995416970?autoplay=1&loop=1&muted=1&background=1&quality=540p"
+                    width="560"
+                    height="240"
+                    class="lazy-iframe"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    title="RANGE ROVER SPORT SV EDITION TWO HERO FILM"
+                  ></iframe>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </section>
+
     <section class="sixth-sec">
       <div class="container">
         <div class="row align-items-center">
@@ -380,6 +399,8 @@
                   src="./assets/images/RRS1.webp"
                   loading="lazy"
                   alt="detail 1"
+                  width="400"
+                  height="240"
                 />
               </div>
               <div class="grid-item item2">
@@ -387,6 +408,8 @@
                   src="./assets/images/RRS2.webp"
                   loading="lazy"
                   alt="interior"
+                  width="560"
+                  height="240"
                 />
               </div>
               <div class="grid-item item3">
@@ -394,22 +417,19 @@
                   src="./assets/images/RRS3.webp"
                   loading="lazy"
                   alt="rear"
+                  width="400"
+                  height="240"
                 />
               </div>
               <div class="grid-item item4">
-                <div
-                  id="iframe-holder"
-                  class="vimeo-iframe-holder aspect-ratio-pls js-embed-target"
-                  bis_skin_checked="1"
-                >
+                <div class="vimeo-iframe-holder">
                   <iframe
-                    data-src="https://player.vimeo.com/video/995416970?autoplay=1&amp;loop=1&amp;muted=1&amp;background=1"
-                    width="3840"
+                    data-src="https://player.vimeo.com/video/995416970?autoplay=1&loop=1&muted=1&background=1&quality=540p"
+                    width="560"
                     class="lazy-iframe"
-                    height="2160"
-                    loading="lazy"
+                    height="240"
                     frameborder="0"
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                    allow="autoplay; fullscreen; picture-in-picture"
                     title="RANGE ROVER SPORT SV EDITION TWO HERO FILM"
                   ></iframe>
                 </div>
@@ -428,6 +448,7 @@
         </div>
       </div>
     </section>
+
     <section class="seventh-sec">
       <div class="container">
         <div class="row align-items-center">
@@ -448,6 +469,8 @@
                   src="./assets/images/RRS1.webp"
                   loading="lazy"
                   alt="detail 1"
+                  width="400"
+                  height="240"
                 />
               </div>
               <div class="grid-item item2">
@@ -455,6 +478,8 @@
                   src="./assets/images/RRS2.webp"
                   loading="lazy"
                   alt="interior"
+                  width="560"
+                  height="240"
                 />
               </div>
               <div class="grid-item item3">
@@ -462,22 +487,19 @@
                   src="./assets/images/RRS3.webp"
                   loading="lazy"
                   alt="rear"
+                  width="400"
+                  height="240"
                 />
               </div>
               <div class="grid-item item4">
-                <div
-                  id="iframe-holder"
-                  class="vimeo-iframe-holder aspect-ratio-pls js-embed-target"
-                  bis_skin_checked="1"
-                >
+                <div class="vimeo-iframe-holder">
                   <iframe
-                    data-src="https://player.vimeo.com/video/995416970?autoplay=1&amp;loop=1&amp;muted=1&amp;background=1"
-                    width="3840"
+                    data-src="https://player.vimeo.com/video/995416970?autoplay=1&loop=1&muted=1&background=1&quality=540p"
+                    width="560"
                     class="lazy-iframe"
-                    height="2160"
-                    loading="lazy"
+                    height="240"
                     frameborder="0"
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                    allow="autoplay; fullscreen; picture-in-picture"
                     title="RANGE ROVER SPORT SV EDITION TWO HERO FILM"
                   ></iframe>
                 </div>
@@ -487,6 +509,7 @@
         </div>
       </div>
     </section>
+
     <section class="eighth-sec">
       <div class="container">
         <div class="row align-items-center">
@@ -497,6 +520,8 @@
                   src="./assets/images/RRS1.webp"
                   loading="lazy"
                   alt="detail 1"
+                  width="400"
+                  height="240"
                 />
               </div>
               <div class="grid-item item2">
@@ -504,6 +529,8 @@
                   src="./assets/images/RRS2.webp"
                   loading="lazy"
                   alt="interior"
+                  width="560"
+                  height="240"
                 />
               </div>
               <div class="grid-item item3">
@@ -511,22 +538,19 @@
                   src="./assets/images/RRS3.webp"
                   loading="lazy"
                   alt="rear"
+                  width="400"
+                  height="240"
                 />
               </div>
               <div class="grid-item item4">
-                <div
-                  id="iframe-holder"
-                  class="vimeo-iframe-holder aspect-ratio-pls js-embed-target"
-                  bis_skin_checked="1"
-                >
+                <div class="vimeo-iframe-holder">
                   <iframe
-                    data-src="https://player.vimeo.com/video/995416970?autoplay=1&amp;loop=1&amp;muted=1&amp;background=1"
-                    width="3840"
+                    data-src="https://player.vimeo.com/video/995416970?autoplay=1&loop=1&muted=1&background=1&quality=540p"
+                    width="560"
                     class="lazy-iframe"
-                    height="2160"
-                    loading="lazy"
+                    height="240"
                     frameborder="0"
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                    allow="autoplay; fullscreen; picture-in-picture"
                     title="RANGE ROVER SPORT SV EDITION TWO HERO FILM"
                   ></iframe>
                 </div>
@@ -545,8 +569,13 @@
         </div>
       </div>
     </section>
+
     <section class="nineth-sec">
-      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+      <div
+        id="carouselExampleDark"
+        class="carousel carousel-dark slide"
+        data-bs-ride="carousel"
+      >
         <div class="carousel-indicators">
           <button
             type="button"
@@ -568,6 +597,12 @@
             data-bs-slide-to="2"
             aria-label="Slide 3"
           ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
@@ -575,7 +610,9 @@
               src="./assets/images/s1.webp"
               loading="lazy"
               class="d-block w-100"
-              alt="..."
+              alt="Slide 1"
+              width="1200"
+              height="600"
             />
             <div class="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
@@ -584,12 +621,14 @@
               </p>
             </div>
           </div>
-          <div class="carousel-item" data-bs-interval="2000">
+          <div class="carousel-item" data-bs-interval="10000">
             <img
               src="./assets/images/s2.webp"
               loading="lazy"
               class="d-block w-100"
-              alt="..."
+              alt="Slide 2"
+              width="1200"
+              height="600"
             />
             <div class="carousel-caption d-none d-md-block">
               <h5>Second slide label</h5>
@@ -598,12 +637,14 @@
               </p>
             </div>
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item" data-bs-interval="10000">
             <img
               src="./assets/images/s4.webp"
               loading="lazy"
               class="d-block w-100"
-              alt="..."
+              alt="Slide 3"
+              width="1200"
+              height="600"
             />
             <div class="carousel-caption d-none d-md-block">
               <h5>Third slide label</h5>
@@ -612,17 +653,19 @@
               </p>
             </div>
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item" data-bs-interval="10000">
             <img
               src="./assets/images/s3.webp"
               loading="lazy"
               class="d-block w-100"
-              alt="..."
+              alt="Slide 4"
+              width="1200"
+              height="600"
             />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
+              <h5>Fourth slide label</h5>
               <p>
-                Some representative placeholder content for the third slide.
+                Some representative placeholder content for the fourth slide.
               </p>
             </div>
           </div>
@@ -647,10 +690,19 @@
         </button>
       </div>
     </section>
+
     <section class="tenth-sec">
       <footer class="py-5">
-        <div class="row" bis_skin_checked="1">
-          <div class="col-6 col-md-2 mb-3" bis_skin_checked="1">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
             <h5>Section</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
@@ -672,58 +724,11 @@
               </li>
             </ul>
           </div>
-          <div class="col-6 col-md-2 mb-3" bis_skin_checked="1">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary"
-                  >Features</a
-                >
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-2 mb-3" bis_skin_checked="1">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary"
-                  >Features</a
-                >
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-5 offset-md-1 mb-3" bis_skin_checked="1">
+          <div class="col-md-5 offset-md-1 mb-3">
             <form>
               <h5>Subscribe to our newsletter</h5>
               <p>Monthly digest of what's new and exciting from us.</p>
-              <div
-                class="d-flex flex-column flex-sm-row w-100 gap-2"
-                bis_skin_checked="1"
-              >
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                 <label for="newsletter1" class="visually-hidden"
                   >Email address</label
                 >
@@ -740,7 +745,6 @@
         </div>
         <div
           class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
-          bis_skin_checked="1"
         >
           <p>© 2025 Company, Inc. All rights reserved.</p>
           <ul class="list-unstyled d-flex">
@@ -760,23 +764,89 @@
         </div>
       </footer>
     </section>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const lazyIframes = document.querySelectorAll(".lazy-iframe");
 
-        // Create an observer that watches for iframe visibility
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              // Replace data-src with src (load the real video)
-              entry.target.src = entry.target.dataset.src;
-              observer.unobserve(entry.target); // Stop observing once loaded
-            }
-          });
+    <script>
+      // Performance optimized lazy loading
+      document.addEventListener("DOMContentLoaded", function () {
+        // Reduced motion for performance
+        const prefersReducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+        // Lazy load iframes with optimization
+        const lazyIframes = document.querySelectorAll(".lazy-iframe");
+        const iframeObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const iframe = entry.target;
+                iframe.src = iframe.dataset.src;
+                iframeObserver.unobserve(iframe);
+              }
+            });
+          },
+          {
+            rootMargin: "50px",
+          }
+        );
+
+        lazyIframes.forEach((iframe) => iframeObserver.observe(iframe));
+
+        // Optimized image loading with fade-in
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        lazyImages.forEach((img) => {
+          if (img.complete) {
+            img.style.opacity = "1";
+          } else {
+            img.style.opacity = "0";
+            img.addEventListener(
+              "load",
+              function () {
+                this.style.transition = "opacity 0.3s ease";
+                this.style.opacity = "1";
+              },
+              { once: true }
+            );
+          }
         });
 
-        // Start observing all lazy iframes
-        lazyIframes.forEach((iframe) => observer.observe(iframe));
+        // Throttled scroll handler for navbar
+        let ticking = false;
+        const navbar = document.querySelector(".navbar");
+
+        function updateNavbar() {
+          const currentScroll = window.pageYOffset;
+          if (currentScroll > 100) {
+            navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
+          } else {
+            navbar.style.boxShadow = "none";
+          }
+          ticking = false;
+        }
+
+        window.addEventListener(
+          "scroll",
+          () => {
+            if (!ticking) {
+              window.requestAnimationFrame(updateNavbar);
+              ticking = true;
+            }
+          },
+          { passive: true }
+        );
+
+        // Debounced resize handler
+        let resizeTimer;
+        window.addEventListener(
+          "resize",
+          () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+              // Handle any resize-specific logic here
+            }, 250);
+          },
+          { passive: true }
+        );
       });
     </script>
 
@@ -785,64 +855,5 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <script>
-      // Lazy load iframes
-      document.addEventListener("DOMContentLoaded", function () {
-        const lazyIframes = document.querySelectorAll(".lazy-iframe");
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.src = entry.target.dataset.src;
-              observer.unobserve(entry.target);
-            }
-          });
-        });
-        lazyIframes.forEach((iframe) => observer.observe(iframe));
-
-        // Lazy load images with fade-in
-        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-        lazyImages.forEach((img) => {
-          img.addEventListener("load", function () {
-            this.classList.add("loaded");
-          });
-          if (img.complete) {
-            img.classList.add("loaded");
-          }
-        });
-
-        // Scroll reveal animation
-        const revealElements = document.querySelectorAll(".reveal");
-        const revealObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-                revealObserver.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.1 }
-        );
-
-        revealElements.forEach((el) => revealObserver.observe(el));
-
-        // Smooth navbar on scroll
-        let lastScroll = 0;
-        const navbar = document.querySelector(".navbar");
-        window.addEventListener(
-          "scroll",
-          () => {
-            const currentScroll = window.pageYOffset;
-            if (currentScroll > 100) {
-              navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
-            } else {
-              navbar.style.boxShadow = "none";
-            }
-            lastScroll = currentScroll;
-          },
-          { passive: true }
-        );
-      });
-    </script>
   </body>
 </html>
