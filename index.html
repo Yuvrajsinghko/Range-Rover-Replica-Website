@@ -785,5 +785,64 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // Lazy load iframes
+      document.addEventListener("DOMContentLoaded", function () {
+        const lazyIframes = document.querySelectorAll(".lazy-iframe");
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.src = entry.target.dataset.src;
+              observer.unobserve(entry.target);
+            }
+          });
+        });
+        lazyIframes.forEach((iframe) => observer.observe(iframe));
+
+        // Lazy load images with fade-in
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        lazyImages.forEach((img) => {
+          img.addEventListener("load", function () {
+            this.classList.add("loaded");
+          });
+          if (img.complete) {
+            img.classList.add("loaded");
+          }
+        });
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll(".reveal");
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        revealElements.forEach((el) => revealObserver.observe(el));
+
+        // Smooth navbar on scroll
+        let lastScroll = 0;
+        const navbar = document.querySelector(".navbar");
+        window.addEventListener(
+          "scroll",
+          () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 100) {
+              navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
+            } else {
+              navbar.style.boxShadow = "none";
+            }
+            lastScroll = currentScroll;
+          },
+          { passive: true }
+        );
+      });
+    </script>
   </body>
 </html>
