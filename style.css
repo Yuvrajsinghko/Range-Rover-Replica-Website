@@ -259,7 +259,8 @@ body {
 }
 
 .showcase {
-  margin-top: 350px;
+  margin-top: 80px;
+  margin-bottom: 80px;
   display: flex;
   justify-content: center;
   gap: 40px;
@@ -310,8 +311,7 @@ body {
   grid-template-columns: minmax(auto, 1200px) minmax(300px, 1fr);
   gap: 60px;
   align-items: center;
-  padding: clamp(40px, 5vw, 100px);
-  min-height: 100vh;
+  padding: 80px clamp(40px, 5vw, 100px);
   width: 100%;
   background-color: #fafbfb;
   position: relative;
@@ -454,7 +454,7 @@ body {
 
 .fifth-sec {
   width: 100%;
-  padding: 60px 0;
+  padding: 80px 0;
   background: #fafbfb;
 }
 
@@ -562,12 +562,12 @@ body {
 }
 
 .sixth-sec {
-  padding: 60px 0;
+  padding: 80px 0;
 }
 
 .seventh-sec {
-  margin-top: 80px;
   padding: 80px 60px;
+  background: #1a1a1a;
 }
 
 .seventh-sec h5,
@@ -577,16 +577,15 @@ body {
 }
 
 .eighth-sec {
-  margin-bottom: 60px;
-  padding: 60px 0;
+  padding: 80px 0;
 }
 
 .nineth-sec {
-  padding: 100px;
+  padding: 80px 100px;
 }
 
 .tenth-sec {
-  margin-top: 90px;
+  padding: 80px 0;
 }
 
 /* Advanced image loading and rendering */
