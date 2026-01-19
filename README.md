@@ -98,13 +98,8 @@ Contributions are welcome.
 
 ---
 
-## 📜 License
 
-This project is licensed under the **MIT License**.
-You are free to use, modify, and distribute it.
-
----
 
 <p align="center">
-  Made with ❤️ by <strong>Yuvrajsinghko</strong>
+  Made with ❤️ by <strong>Yuvraj Singh Kot</strong>
 </p>
