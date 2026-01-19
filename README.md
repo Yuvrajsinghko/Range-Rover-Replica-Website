@@ -24,33 +24,32 @@ This project is purely for **educational and portfolio purposes**.
 
 ## 🚀 Features
 
-* Fully **responsive design**
-* Clean, modern UI inspired by luxury automotive websites
-* Structured and readable HTML
-* Custom styling using CSS
-* Smooth layout flow and spacing
-* Beginner-friendly codebase
+- Fully **responsive design**
+- Clean, modern UI inspired by luxury automotive websites
+- Structured and readable HTML
+- Custom styling using CSS
+- Smooth layout flow and spacing
+- Beginner-friendly codebase
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **HTML5**
-* **CSS3**
-* No frameworks, no libraries — pure front-end fundamentals
+- **HTML5**
+- **CSS3**
+- No frameworks, no libraries — pure front-end fundamentals
 
 ---
 
 ## 📸 Preview
 
-> Add screenshots of your project UI here to make the README stronger.
+<p align="center">
+  <img src="./assets/images/screenshot-main.png" alt="Desktop View" width="720" />
+</p>
 
-```
-assets/images/screenshot-main.png
-assets/images/screenshot-mobile.png
-```
-
----
+<p align="center">
+  <img src="./assets/images/screenshot-mobile.png" alt="Mobile View" width="320" />
+</p>
 
 ## 📂 Project Structure
 
@@ -92,10 +91,10 @@ Range-Rover-Replica-Website/
 
 Contributions are welcome.
 
-* Fork the repository
-* Create a new branch
-* Make your changes
-* Open a pull request
+- Fork the repository
+- Create a new branch
+- Make your changes
+- Open a pull request
 
 ---
 
